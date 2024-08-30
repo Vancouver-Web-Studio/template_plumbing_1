@@ -6,7 +6,8 @@
   "scripts": {
     "sass": "sass --watch src/styles:src/css",
     "cms": "decap-server",
-    "site": "eleventy --serve"
+    "site": "eleventy --serve",
+    "build": "eleventy"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",

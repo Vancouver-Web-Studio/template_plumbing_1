@@ -11,7 +11,9 @@ eleventyExcludeFromCollections: true
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="/scripts/admin.client.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.registerPreviewStyle("/css/preview.css");
+    </script>
   </body>
 </html>
