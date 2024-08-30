@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ title }} | {{ global.site_name }}</title>
+    <link type="text/css" rel="stylesheet" href="/css/interior.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/{{ css }}"/>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/assets/css/fontawesome.min.css"
+      onload="this.onload=null;this.rel='stylesheet'"/>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/assets/css/brands.min.css"
+      onload="this.onload=null;this.rel='stylesheet'"/>
+    <link type="text/css" rel="stylesheet" href="/assets/css/solid.min.css" onload="this.onload=null;this.rel='stylesheet'"/>
+  </head>
+  <body>
+    {% include '_nav.njk' %}
+    <div class="interior-header">
+      <div class="interior-header-title">
+        <h1>{{ title }}</h1>
+      </div>
+      <img src="/assets/interior-bg.jpg" class="interior-img zoom-out animate"/>
+    </div>
+    <div class="interior-body">
+      {{ content | safe }}
+    </div>
+    {% include '_foot.njk' %}
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: clamp(10pt, 3vw, 13pt);
+  font-weight: 200;
+}
+
+body {
+  font-size: clamp(15pt, 3vw, 18pt);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: clamp(2rem, 1vw, 3rem);
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+.btn, .btn-white, .btn-small, .btn-secondary {
+  text-decoration: none;
+  background-color: #ff5326;
+  color: white;
+  font-weight: bold;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: inline-block;
+  white-space: nowrap;
+  transition: ease-in 0.25s;
+  cursor: pointer;
+  border-radius: 2.5px;
+  text-transform: uppercase;
+}
+.btn:hover, .btn-white:hover, .btn-small:hover, .btn-secondary:hover {
+  background-color: #ffc426;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2.5px solid white;
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: #ffc426;
+  border-color: #ffc426;
+}
+
+.btn-small {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5em;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.btn-small:hover {
+  background-color: #ffc426;
+}
+
+.btn-white {
+  background-color: white;
+  color: #ff9933;
+}
+.btn-white:hover {
+  color: white;
+}
+
+.topper-center {
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: #ff9933;
+}
+
+.topper-left {
+  text-transform: uppercase;
+  display: block;
+  font-weight: bold;
+  color: #ff9933;
+}
+
+form input,
+form textarea {
+  border: 1px solid gray;
+  outline: none;
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  transition: border ease-in 0.25s, box-shadow ease-in 0.25s;
+  resize: vertical;
+}
+form input:focus,
+form textarea:focus {
+  border: 2px solid #ff9933;
+  box-shadow: 0 0 5px #ff9933;
+}
+form button {
+  outline: none;
+  border: none;
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scaleX(1.5) scaleY(1.5);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slide-left.in-view {
+  animation: 1s ease-out 0s slideInFromLeft;
+}
+
+.slide-right.in-view {
+  animation: 1s ease-out 0s slideInFromRight;
+}
+
+.zoom-out.in-view {
+  animation: 1s ease-out 0s zoomOut;
+}
+
+/*# sourceMappingURL=base.css.map */

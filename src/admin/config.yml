@@ -1,0 +1,39 @@
+local_backend: true
+backend:
+  name: proxy
+  proxy: http://localhost:8081/api/v1
+
+media_folder: "public/uploads"
+public_folder: "/uploads/"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "blog/{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/blog.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        allow_multiple: true
+        media_library:
+          config:
+            multiple: true
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  # - name: "portfolio"
+  #   label: "Portfolio"
+  #   folder: "src/portfolio"
+  #   create: true
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   fields: 
+  #     - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/portfolio.njk" }
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Client", name: "client", widget: "string" }
+  #     - { label: "Featured Image", name: "thumbnail", widget: "image" }
+  #     - { label: "Publish Date", name: "date", widget: "datetime" }
+  #     - { label: "Body", name: "body", widget: "markdown" }

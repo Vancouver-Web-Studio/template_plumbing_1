@@ -1,0 +1,35 @@
+---
+title: Contact Us
+layout: layouts/interior.njk
+css: contact.css
+---
+
+<div class="body">
+
+    <div class="body-form">
+        <div>
+        <div class="topper-left">
+            Contact
+        </div>
+        <h3>Get in Touch</h3>
+        </div>
+
+        <div>
+             Call us or email our team for prompt and professional assistance tailored to your needs.
+        </div>
+        <form method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"/>
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Name" required="required"/>
+                <input type="email" name="email" placeholder="Email" required="required"/>
+            </div>
+            <textarea name="message" placeholder="Your Message" required="required"></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;"/>
+            <button type="submit" class="btn">Submit Form</button>
+            <div id="result"></div>
+        </form>
+    </div>
+        <div class="body-content">
+        {{ content | safe }}
+    </div>
+</div>

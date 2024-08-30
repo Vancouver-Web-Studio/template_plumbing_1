@@ -1,0 +1,57 @@
+<div class="nav-banner">
+  <div class="nav-banner-container">
+    <div class="brand-title">
+      <img src="/assets/logo.png"/>
+    </div>
+    <div class="banner-contact">
+      <div class="banner-contact-title" style="color: red">
+        24H Emergency Service
+      </div>
+      <div class="banner-contact-description">
+        <i class="fa-solid fa-phone"></i>
+        &nbsp; 800-123-4567
+      </div>
+    </div>
+    <div class="banner-contact call-office-hide">
+      <div class="banner-contact-title ">
+        Call Office #
+      </div>
+      <div class="banner-contact-description">
+        <i class="fa-solid fa-phone"></i>
+        &nbsp; 415-123-4567
+      </div>
+    </div>
+    <div class="banner-cta">
+      <a href="#" class="btn">Schedule Service Now</a>
+    </div>
+  </div>
+</div>
+<nav class="navbar">
+  <div class="navbar-bottom">
+    <div class="mobile-menu">
+      <div class="toggle-button-container">
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+      </div>
+      <div class="mobile-cta-btn">
+        <a href="#" class="btn">Request Service</a>
+      </div>
+    </div>
+    <div class="navbar-links">
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+
+        {% for page in collections.pages | sortByOrderKey %}
+          <li>
+            <a href="{{ page.url }}">{{ page.data.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

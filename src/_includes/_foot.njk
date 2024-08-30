@@ -1,0 +1,45 @@
+<footer>
+    <div class="footer-left">
+      <h2>Ready to adopt a new look?</h2>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div>
+        <a href="" class="btn">Get a Quote</a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div>
+        <div class="footer-icons">
+          <h4>Contact</h4>
+          <div class="footer-icon-label">
+            <div>
+              <i class="fa-solid fa-location-pin"></i>
+            </div>
+            <div>#8901 Marmora Road Chi Minh City, Vietnam</div>
+          </div>
+          <div class="footer-icon-label">
+            <div>
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>604-123-1234</div>
+          </div>
+          <div class="footer-icon-label">
+            <div>
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>abc@loremipsum.com</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-quick-links">
+        <h4>Quick Links</h4>
+        <div>
+          <a href="/">Home</a>
+        </div>
+        {%- for page in collections.pages | sortByOrderKey -%}
+          <div>
+            <a href="{{ page.url }}">{{ page.data.title }}</a>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </footer>

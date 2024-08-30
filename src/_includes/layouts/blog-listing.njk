@@ -1,0 +1,27 @@
+---
+title: Blog
+layout: layouts/interior.njk
+css: blog_listing.css
+---
+
+<div class="body">
+    {%- for blog in collections.blog -%}
+        <div class="blog-card">
+            <div class="blog-thumbnail">
+                <img src="{{ blog.data.thumbnail }}"/>
+            </div>
+            <div class="blog-text">
+                <div class="topper-left">
+                    {{ blog.data.date.toUTCString() }}
+                </div>
+                <h3>{{ blog.data.title }}</h3>
+                <div>
+                    {{ blog.data.content.slice(0, 200) | safe }}...
+                </div>
+                <div>
+                    <a href="{{ blog.url }}" class="btn-small">Read More</a>
+                </div>
+            </div>
+        </div>
+    {%- endfor -%}
+</div>

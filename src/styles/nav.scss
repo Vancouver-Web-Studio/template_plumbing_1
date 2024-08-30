@@ -1,0 +1,257 @@
+@import "base.scss";
+
+$navbar_width: 1550px;
+$navbar_padding: 2%;
+body {
+  position: relative;
+}
+.nav-banner {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 99;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nav-banner-container {
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: $navbar_padding;
+  padding-right: $navbar_padding;
+
+  z-index: 99;
+  align-self: center;
+  width: 100%;
+  max-width: $navbar_width;
+}
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+
+
+}
+
+.navbar-bottom {
+  display: flex;
+  height: auto;
+  column-gap: 5vw;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba($color: $primary_color, $alpha: 1);
+  color: white;
+  font-size: 18pt;
+
+}
+
+.brand-title {
+  flex-grow: 1;
+  img {
+    max-height: 50px;
+  }
+}
+.banner-contact {
+  display: flex;
+  flex-direction: column;
+}
+.banner-contact-title {
+  font-size: clamp(10pt, 0.8vw, 15pt);
+  text-transform: uppercase;
+
+}
+
+.banner-contact-description {
+  font-size: clamp(15pt, 1.3vw, 18pt);
+   i {
+    color: $secondary_color;
+   }
+}
+
+.navbar-links {
+  max-width: $navbar_width;
+  width: 100%;
+  align-self: center;
+  padding-left: $navbar_padding;
+  padding-right: $navbar_padding;
+}
+.navbar-links ul {
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a:hover {
+  background-color: $secondary_color;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1.5rem;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: ease-in-out 0.25s;
+}
+.dropdown {
+  position: relative;
+  display: block;
+}
+.dropdown > a::after {
+  content: "\00a0\00a0\00a0\25bc";
+  font-size: 8pt;
+  padding-right: 10px;
+}
+
+.dropdown:hover ul, .dropdown:active {
+  display: block;
+}
+
+.dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: rgba($secondary_color, $alpha: 0.9);
+  backdrop-filter: blur(10px);
+  left: 0;
+  top: 70px;
+  width: 100%;
+}
+
+.mobile-cta-btn {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.toggle-button {
+  // position: absolute;
+  // top: 0.05rem;
+  // left: 0.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 65px;
+  row-gap: 12px;
+  padding: 10px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+//   border-radius: 10px;
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 900px;
+  }
+}
+
+.active {
+  /* max-height: 0; */
+  animation: dropdown 1s;
+}
+@media (max-width: 660px) {
+  .nav-banner-container {
+    flex-direction: column;
+    row-gap: 1rem;
+
+  }
+  .call-office-hide {
+    display: none;
+  }
+  .banner-contact {
+    text-align: center;
+    
+  }
+}
+@media (max-width: 950px) {
+  .banner-cta {
+    display: none;
+  }
+
+  .toggle-button-container {
+    flex-grow: 1;
+    width: 100%;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .mobile-cta-btn {
+    display: block;
+    position: relative;
+    
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    min-height: 70px;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  .navbar-links {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+  }
+  .navbar {
+    // position: relative;
+    // top:auto
+  }
+  .navbar-bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+  }
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    height: fit-content;
+  }
+
+
+  .dropdown ul {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+}

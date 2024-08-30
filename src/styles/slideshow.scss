@@ -1,0 +1,22 @@
+.slideshow-slide {
+  display: none;
+  img {
+    display: block;
+    max-height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.fade {
+    animation: fade 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

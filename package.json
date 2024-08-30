@@ -1,0 +1,22 @@
+{
+  "name": "painter_1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass --watch src/styles:src/css",
+    "cms": "decap-server",
+    "site": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "browserify": "^17.0.0",
+    "decap-cms-app": "^3.3.2",
+    "decap-server": "^3.1.2",
+    "nunjucks": "^3.2.4",
+    "nunjucks-date-filter": "^0.1.1",
+    "uglify-js": "^3.19.2",
+    "uglifycss": "^0.0.29",
+    "watchify": "^4.0.0"
+  }
+}

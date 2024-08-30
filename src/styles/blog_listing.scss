@@ -1,0 +1,33 @@
+@import "base.scss";
+.body {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+.blog-card {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    // border: 1px solid gray;
+    border-radius: 10px;
+    padding: 2%;
+    box-shadow: 0 0 10px gray;
+}
+
+.blog-thumbnail {
+    img {
+        max-width: 100%;
+    }
+}
+
+.blog-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+

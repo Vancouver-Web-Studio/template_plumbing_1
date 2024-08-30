@@ -1,0 +1,37 @@
+@import "nav.scss";
+@import "footer.scss";
+.interior-body {
+    // min-height: 100vh;
+    z-index: 2;
+    position: relative;
+    background-color: white;
+    padding: 5% 10% 5% 10%;
+  }
+  .interior-header {
+    position: relative;
+    background-color: black;
+    max-height: 33vh;
+    .interior-header-title {
+      position: absolute;
+      top: 60%;
+      color: white;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 1;
+  
+      h1 {
+        white-space: nowrap;
+      }
+  
+    }
+  
+    .interior-img {
+      z-index: 0;
+      object-fit: contain;
+      opacity: 0.5;
+      width: 100%;
+      margin-top: -20vmin;
+      // margin-bottom: -2vmin;
+      overflow: hidden;
+    }
+  }
