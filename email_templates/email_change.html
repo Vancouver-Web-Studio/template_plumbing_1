@@ -1,0 +1,16 @@
+<h2>Vancouver Web Studio: Confirm Change of Email</h2>
+<p>You have requested to change your email on {{ .SiteURL }}</p>
+<p>
+  Follow this link to confirm the update of your email from {{ .Email }} to {{
+  .NewEmail }}:
+</p>
+<p>
+  <a href="{{ .SiteURL }}/admin/#email_change_token={{ .Token }}"
+    >Change Email</a
+  >
+</p>
+
+<p>
+  If you did not make a email change request, please contact Vancouver Web
+  Studio immediately.
+</p>

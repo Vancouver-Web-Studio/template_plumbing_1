@@ -14,6 +14,8 @@ module.exports = function (config) {
   config.addPassthroughCopy("./assets");
   config.addPassthroughCopy("./src/scripts");
   config.addPassthroughCopy("./src/admin");
+  config.addPassthroughCopy("./email_templates");
+
   return {
     dir: {
       input: "src",
